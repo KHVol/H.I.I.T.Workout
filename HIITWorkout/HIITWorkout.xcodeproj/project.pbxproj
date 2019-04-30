@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECD7AB2A2278D0D500C2AB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7AB292278D0D500C2AB98 /* AppDelegate.swift */; };
+		ECD7AB2C2278D0D500C2AB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7AB2B2278D0D500C2AB98 /* ViewController.swift */; };
+		ECD7AB2F2278D0D500C2AB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD7AB2D2278D0D500C2AB98 /* Main.storyboard */; };
+		ECD7AB312278D0D700C2AB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD7AB302278D0D700C2AB98 /* Assets.xcassets */; };
+		ECD7AB342278D0D700C2AB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD7AB322278D0D700C2AB98 /* LaunchScreen.storyboard */; };
+		ECD7AB3F2278D0D700C2AB98 /* HIITWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7AB3E2278D0D700C2AB98 /* HIITWorkoutTests.swift */; };
+		ECD7AB4A2278D0D700C2AB98 /* HIITWorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7AB492278D0D700C2AB98 /* HIITWorkoutUITests.swift */; };
+		ECD7AB5A2278F15700C2AB98 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECD7AB592278F15700C2AB98 /* 1.mp3 */; };
+		ECD7AB5D2278F20500C2AB98 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD7AB5C2278F20500C2AB98 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECD7AB3B2278D0D700C2AB98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECD7AB1E2278D0D500C2AB98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECD7AB252278D0D500C2AB98;
+			remoteInfo = HIITWorkout;
+		};
+		ECD7AB462278D0D700C2AB98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECD7AB1E2278D0D500C2AB98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECD7AB252278D0D500C2AB98;
+			remoteInfo = HIITWorkout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECD7AB262278D0D500C2AB98 /* HIITWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD7AB292278D0D500C2AB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECD7AB2B2278D0D500C2AB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECD7AB2E2278D0D500C2AB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECD7AB302278D0D700C2AB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECD7AB332278D0D700C2AB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECD7AB352278D0D700C2AB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD7AB3A2278D0D700C2AB98 /* HIITWorkoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HIITWorkoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD7AB3E2278D0D700C2AB98 /* HIITWorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITWorkoutTests.swift; sourceTree = "<group>"; };
+		ECD7AB402278D0D700C2AB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD7AB452278D0D700C2AB98 /* HIITWorkoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HIITWorkoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD7AB492278D0D700C2AB98 /* HIITWorkoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITWorkoutUITests.swift; sourceTree = "<group>"; };
+		ECD7AB4B2278D0D700C2AB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD7AB592278F15700C2AB98 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		ECD7AB5C2278F20500C2AB98 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECD7AB232278D0D500C2AB98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD7AB5D2278F20500C2AB98 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7AB372278D0D700C2AB98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7AB422278D0D700C2AB98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECD7AB1D2278D0D500C2AB98 = {
+			isa = PBXGroup;
+			children = (
+				ECD7AB282278D0D500C2AB98 /* HIITWorkout */,
+				ECD7AB3D2278D0D700C2AB98 /* HIITWorkoutTests */,
+				ECD7AB482278D0D700C2AB98 /* HIITWorkoutUITests */,
+				ECD7AB272278D0D500C2AB98 /* Products */,
+				ECD7AB5B2278F20500C2AB98 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ECD7AB272278D0D500C2AB98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECD7AB262278D0D500C2AB98 /* HIITWorkout.app */,
+				ECD7AB3A2278D0D700C2AB98 /* HIITWorkoutTests.xctest */,
+				ECD7AB452278D0D700C2AB98 /* HIITWorkoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECD7AB282278D0D500C2AB98 /* HIITWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				ECD7AB292278D0D500C2AB98 /* AppDelegate.swift */,
+				ECD7AB2B2278D0D500C2AB98 /* ViewController.swift */,
+				ECD7AB2D2278D0D500C2AB98 /* Main.storyboard */,
+				ECD7AB302278D0D700C2AB98 /* Assets.xcassets */,
+				ECD7AB322278D0D700C2AB98 /* LaunchScreen.storyboard */,
+				ECD7AB352278D0D700C2AB98 /* Info.plist */,
+				ECD7AB592278F15700C2AB98 /* 1.mp3 */,
+			);
+			path = HIITWorkout;
+			sourceTree = "<group>";
+		};
+		ECD7AB3D2278D0D700C2AB98 /* HIITWorkoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECD7AB3E2278D0D700C2AB98 /* HIITWorkoutTests.swift */,
+				ECD7AB402278D0D700C2AB98 /* Info.plist */,
+			);
+			path = HIITWorkoutTests;
+			sourceTree = "<group>";
+		};
+		ECD7AB482278D0D700C2AB98 /* HIITWorkoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECD7AB492278D0D700C2AB98 /* HIITWorkoutUITests.swift */,
+				ECD7AB4B2278D0D700C2AB98 /* Info.plist */,
+			);
+			path = HIITWorkoutUITests;
+			sourceTree = "<group>";
+		};
+		ECD7AB5B2278F20500C2AB98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECD7AB5C2278F20500C2AB98 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECD7AB252278D0D500C2AB98 /* HIITWorkout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECD7AB4E2278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkout" */;
+			buildPhases = (
+				ECD7AB222278D0D500C2AB98 /* Sources */,
+				ECD7AB232278D0D500C2AB98 /* Frameworks */,
+				ECD7AB242278D0D500C2AB98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HIITWorkout;
+			productName = HIITWorkout;
+			productReference = ECD7AB262278D0D500C2AB98 /* HIITWorkout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECD7AB392278D0D700C2AB98 /* HIITWorkoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECD7AB512278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkoutTests" */;
+			buildPhases = (
+				ECD7AB362278D0D700C2AB98 /* Sources */,
+				ECD7AB372278D0D700C2AB98 /* Frameworks */,
+				ECD7AB382278D0D700C2AB98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECD7AB3C2278D0D700C2AB98 /* PBXTargetDependency */,
+			);
+			name = HIITWorkoutTests;
+			productName = HIITWorkoutTests;
+			productReference = ECD7AB3A2278D0D700C2AB98 /* HIITWorkoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECD7AB442278D0D700C2AB98 /* HIITWorkoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECD7AB542278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkoutUITests" */;
+			buildPhases = (
+				ECD7AB412278D0D700C2AB98 /* Sources */,
+				ECD7AB422278D0D700C2AB98 /* Frameworks */,
+				ECD7AB432278D0D700C2AB98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECD7AB472278D0D700C2AB98 /* PBXTargetDependency */,
+			);
+			name = HIITWorkoutUITests;
+			productName = HIITWorkoutUITests;
+			productReference = ECD7AB452278D0D700C2AB98 /* HIITWorkoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECD7AB1E2278D0D500C2AB98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Kenton Horton";
+				TargetAttributes = {
+					ECD7AB252278D0D500C2AB98 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					ECD7AB392278D0D700C2AB98 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = ECD7AB252278D0D500C2AB98;
+					};
+					ECD7AB442278D0D700C2AB98 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = ECD7AB252278D0D500C2AB98;
+					};
+				};
+			};
+			buildConfigurationList = ECD7AB212278D0D500C2AB98 /* Build configuration list for PBXProject "HIITWorkout" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECD7AB1D2278D0D500C2AB98;
+			productRefGroup = ECD7AB272278D0D500C2AB98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECD7AB252278D0D500C2AB98 /* HIITWorkout */,
+				ECD7AB392278D0D700C2AB98 /* HIITWorkoutTests */,
+				ECD7AB442278D0D700C2AB98 /* HIITWorkoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECD7AB242278D0D500C2AB98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD7AB5A2278F15700C2AB98 /* 1.mp3 in Resources */,
+				ECD7AB342278D0D700C2AB98 /* LaunchScreen.storyboard in Resources */,
+				ECD7AB312278D0D700C2AB98 /* Assets.xcassets in Resources */,
+				ECD7AB2F2278D0D500C2AB98 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7AB382278D0D700C2AB98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7AB432278D0D700C2AB98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECD7AB222278D0D500C2AB98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD7AB2C2278D0D500C2AB98 /* ViewController.swift in Sources */,
+				ECD7AB2A2278D0D500C2AB98 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7AB362278D0D700C2AB98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD7AB3F2278D0D700C2AB98 /* HIITWorkoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD7AB412278D0D700C2AB98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD7AB4A2278D0D700C2AB98 /* HIITWorkoutUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECD7AB3C2278D0D700C2AB98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECD7AB252278D0D500C2AB98 /* HIITWorkout */;
+			targetProxy = ECD7AB3B2278D0D700C2AB98 /* PBXContainerItemProxy */;
+		};
+		ECD7AB472278D0D700C2AB98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECD7AB252278D0D500C2AB98 /* HIITWorkout */;
+			targetProxy = ECD7AB462278D0D700C2AB98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECD7AB2D2278D0D500C2AB98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECD7AB2E2278D0D500C2AB98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECD7AB322278D0D700C2AB98 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECD7AB332278D0D700C2AB98 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECD7AB4C2278D0D700C2AB98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECD7AB4D2278D0D700C2AB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECD7AB4F2278D0D700C2AB98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				INFOPLIST_FILE = HIITWorkout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECD7AB502278D0D700C2AB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				INFOPLIST_FILE = HIITWorkout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECD7AB522278D0D700C2AB98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				INFOPLIST_FILE = HIITWorkoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HIITWorkout.app/HIITWorkout";
+			};
+			name = Debug;
+		};
+		ECD7AB532278D0D700C2AB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				INFOPLIST_FILE = HIITWorkoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HIITWorkout.app/HIITWorkout";
+			};
+			name = Release;
+		};
+		ECD7AB552278D0D700C2AB98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				INFOPLIST_FILE = HIITWorkoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HIITWorkout;
+			};
+			name = Debug;
+		};
+		ECD7AB562278D0D700C2AB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				INFOPLIST_FILE = HIITWorkoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HIITWorkout;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECD7AB212278D0D500C2AB98 /* Build configuration list for PBXProject "HIITWorkout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD7AB4C2278D0D700C2AB98 /* Debug */,
+				ECD7AB4D2278D0D700C2AB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECD7AB4E2278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD7AB4F2278D0D700C2AB98 /* Debug */,
+				ECD7AB502278D0D700C2AB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECD7AB512278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD7AB522278D0D700C2AB98 /* Debug */,
+				ECD7AB532278D0D700C2AB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECD7AB542278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD7AB552278D0D700C2AB98 /* Debug */,
+				ECD7AB562278D0D700C2AB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECD7AB1E2278D0D500C2AB98 /* Project object */;
+}
