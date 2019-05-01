@@ -110,6 +110,24 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var subView: UIView!
     
+    @IBAction func totalTimeDecreaseBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func totalTimeIncreaseBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func sprintTimeDecreaseBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func sprintTimeIncreaseBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func restTimeDecreaseBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func restTimeIncreaseBtn(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

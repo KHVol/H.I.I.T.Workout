@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-Je-Qel" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="67.5" y="65" width="240" height="240"/>
+                                <rect key="frame" x="67.5" y="80" width="240" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asm-Mq-ifE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asm-Mq-ifE">
                                         <rect key="frame" x="15" y="104" width="210" height="32"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="50"/>
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
                                         <color key="value" red="0.039753659357992202" green="0.58974214452385165" blue="0.93221241235733032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -67,7 +67,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZq-yi-W3N">
-                                <rect key="frame" x="125" y="586.5" width="50" height="30"/>
+                                <rect key="frame" x="125" y="601.5" width="50" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="LgE-l7-jvX"/>
@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q31-Kf-EF0">
-                                <rect key="frame" x="200" y="586.5" width="50" height="30"/>
+                                <rect key="frame" x="200" y="601.5" width="50" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="JFm-F5-5O4"/>
@@ -123,19 +123,19 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL3-wu-0T2">
-                                <rect key="frame" x="100" y="340" width="175" height="18"/>
+                                <rect key="frame" x="100" y="355" width="175" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfY-g0-rMN">
-                                <rect key="frame" x="140" y="368" width="95" height="30"/>
+                                <rect key="frame" x="140" y="383" width="95" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hU5-Rn-BKu">
-                                <rect key="frame" x="100" y="370.5" width="25" height="25"/>
+                                <rect key="frame" x="100" y="385.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hU5-Rn-BKu" secondAttribute="height" multiplier="1:1" id="7eh-TY-We5"/>
                                     <constraint firstAttribute="width" constant="25" id="d23-KJ-jVv"/>
@@ -144,9 +144,12 @@
                                 <state key="normal" backgroundImage="left-arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="totalTimeDecreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIV-3d-V0F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gK-t5-cPK">
-                                <rect key="frame" x="250" y="370.5" width="25" height="25"/>
+                                <rect key="frame" x="250" y="385.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="QVn-97-6yv"/>
                                     <constraint firstAttribute="width" secondItem="8gK-t5-cPK" secondAttribute="height" multiplier="1:1" id="njb-jL-JHg"/>
@@ -155,21 +158,24 @@
                                 <state key="normal" backgroundImage="right-arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="totalTimeIncreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PRd-0b-OYr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPRINT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zso-cq-Jwg">
-                                <rect key="frame" x="100" y="418" width="175" height="18"/>
+                                <rect key="frame" x="100" y="433" width="175" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-JJ-vXj">
-                                <rect key="frame" x="140" y="446" width="95" height="30"/>
+                                <rect key="frame" x="140" y="461" width="95" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avX-da-JHG">
-                                <rect key="frame" x="100" y="448.5" width="25" height="25"/>
+                                <rect key="frame" x="100" y="463.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="yHw-BQ-vtN"/>
                                 </constraints>
@@ -177,9 +183,12 @@
                                 <state key="normal" backgroundImage="left-arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sprintTimeDecreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iR-ZS-fE1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="its-dn-ty1">
-                                <rect key="frame" x="250" y="448.5" width="25" height="25"/>
+                                <rect key="frame" x="250" y="463.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="AEW-3c-e13"/>
                                 </constraints>
@@ -187,21 +196,24 @@
                                 <state key="normal" backgroundImage="right-arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sprintTimeIncreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NiM-iK-ME5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hP2-Wq-B4q">
-                                <rect key="frame" x="100" y="496" width="175" height="18"/>
+                                <rect key="frame" x="100" y="511" width="175" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnW-E1-WsO">
-                                <rect key="frame" x="140" y="524" width="95" height="30"/>
+                                <rect key="frame" x="140" y="539" width="95" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATN-7I-oNG">
-                                <rect key="frame" x="100" y="526.5" width="25" height="25"/>
+                                <rect key="frame" x="100" y="541.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="GGn-dA-swP"/>
                                 </constraints>
@@ -209,9 +221,12 @@
                                 <state key="normal" backgroundImage="left-arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="restTimeDecreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0X-Ra-VdR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoU-ps-lU9">
-                                <rect key="frame" x="250" y="526.5" width="25" height="25"/>
+                                <rect key="frame" x="250" y="541.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="pFb-gR-L0N"/>
                                 </constraints>
@@ -219,6 +234,9 @@
                                 <state key="normal" backgroundImage="right-arrow">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="restTimeIncreaseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyK-t7-4Vi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,7 +258,7 @@
                             <constraint firstItem="ATN-7I-oNG" firstAttribute="top" secondItem="hP2-Wq-B4q" secondAttribute="bottom" constant="12.5" id="NVs-aw-eFL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BL3-wu-0T2" secondAttribute="trailing" constant="100" id="O1A-b4-uFg"/>
                             <constraint firstItem="Q31-Kf-EF0" firstAttribute="leading" secondItem="mZq-yi-W3N" secondAttribute="trailing" constant="25" id="Oh1-96-deR"/>
-                            <constraint firstItem="rTk-Je-Qel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Uja-El-21l"/>
+                            <constraint firstItem="rTk-Je-Qel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Uja-El-21l"/>
                             <constraint firstItem="ATN-7I-oNG" firstAttribute="width" secondItem="ATN-7I-oNG" secondAttribute="height" multiplier="1:1" id="WP3-yA-mcc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rTk-Je-Qel" secondAttribute="trailing" constant="67.5" id="YId-Yl-C0K"/>
                             <constraint firstItem="Zso-cq-Jwg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="YQU-Na-pNT"/>
