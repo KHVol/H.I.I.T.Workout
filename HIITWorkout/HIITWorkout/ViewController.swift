@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLeft: UILabel!
     @IBOutlet weak var startOutlet: UIButton!
     @IBOutlet weak var stopOutlet: UIButton!
-    //@IBOutlet weak var progressRing: UICircularProgressRing!
     
     func convertSeconds()
     {
