@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     var audioPlayer = AVAudioPlayer()
     
     var sprintStartTime = 0
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLeft: UILabel!
     @IBOutlet weak var startOutlet: UIButton!
     @IBOutlet weak var stopOutlet: UIButton!
+    //@IBOutlet weak var progressRing: UICircularProgressRing!
     
     func convertSeconds()
     {
@@ -50,6 +51,8 @@ class ViewController: UIViewController {
             timeLeft.text = String(minutes) + "m " + String(seconds) + "s"
             }
         }
+        
+        
     }
     
     @IBAction func StartTimer(_ sender: UIButton) {
@@ -82,19 +85,19 @@ class ViewController: UIViewController {
         convertSeconds()
         
         if(time == 0){
-            //audioPlayer.play()
+            audioPlayer.play()
             timerStop()
         }
         else if(sprintTimerStarted && (sprintStartTime - sprint == time))
         {
-            //audioPlayer.play()
+            audioPlayer.play()
             sprintTimerStarted = false
             restStartTime = time
             restTimerStarted = true
         }
         else if(restTimerStarted && (restStartTime - rest == time))
         {
-            //audioPlayer.play()
+            audioPlayer.play()
             restTimerStarted = false
             sprintStartTime = time
             sprintTimerStarted = true
@@ -234,17 +237,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //do
-        //{
-       //     let audioPath = Bundle.main.path(forResource: "1", ofType: ".mp3 ")
-         //   try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
-        //}
-        //catch
-        //{
-       //         print(error)
-       // }
+
+        let audioPath = Bundle.main.path(forResource: "1", ofType: ".mp3")
+            do
+            {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+            }
+            catch
+            {
+                print(error)
+            }
         
         UIApplication.shared.statusBarStyle = .lightContent
         
