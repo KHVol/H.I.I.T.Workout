@@ -108,6 +108,7 @@ class ViewController: UIViewController {
             sprintTimerStarted = true
         }
     }
+    @IBOutlet weak var subView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +123,10 @@ class ViewController: UIViewController {
         //{
        //         print(error)
        // }
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        view.setGradientBackground(colorOne: UIColor(red: 58/255, green: 97/255, blue: 134/255, alpha: 1.0), colorTwo: UIColor(red: 137/255, green: 37/255, blue: 62/255, alpha: 1.0))
     }
 }
 

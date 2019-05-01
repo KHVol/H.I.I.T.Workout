@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0798FBABEAAC35C0C5A95ECE /* Pods_HIITWorkoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5275C49E20396D93F5C3C7 /* Pods_HIITWorkoutUITests.framework */; };
+		0AAE40A1227A104300432EFE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE40A0227A104300432EFE /* UIViewExtension.swift */; };
+		845944DCCBA139F0CAAC55BF /* Pods_HIITWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946A7E0F097C269A8E55818B /* Pods_HIITWorkout.framework */; };
+		D86BC225EC9D2988A646029E /* Pods_HIITWorkoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB442540F64504CD71BD5CB7 /* Pods_HIITWorkoutTests.framework */; };
 		ECD7AB2A2278D0D500C2AB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7AB292278D0D500C2AB98 /* AppDelegate.swift */; };
 		ECD7AB2C2278D0D500C2AB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7AB2B2278D0D500C2AB98 /* ViewController.swift */; };
 		ECD7AB2F2278D0D500C2AB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD7AB2D2278D0D500C2AB98 /* Main.storyboard */; };
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001684024E22CD826125EC0C /* Pods-HIITWorkoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITWorkoutTests.debug.xcconfig"; path = "Target Support Files/Pods-HIITWorkoutTests/Pods-HIITWorkoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AAE40A0227A104300432EFE /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		458A07B0A390C120E1636D9C /* Pods-HIITWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITWorkout.release.xcconfig"; path = "Target Support Files/Pods-HIITWorkout/Pods-HIITWorkout.release.xcconfig"; sourceTree = "<group>"; };
+		77C574799575B6B8E23C86F8 /* Pods-HIITWorkoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITWorkoutTests.release.xcconfig"; path = "Target Support Files/Pods-HIITWorkoutTests/Pods-HIITWorkoutTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B6940A2DFDFC110490F6E9F /* Pods-HIITWorkoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITWorkoutUITests.release.xcconfig"; path = "Target Support Files/Pods-HIITWorkoutUITests/Pods-HIITWorkoutUITests.release.xcconfig"; sourceTree = "<group>"; };
+		946A7E0F097C269A8E55818B /* Pods_HIITWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39BE2BD16675FA7F6D52C9D /* Pods-HIITWorkoutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITWorkoutUITests.debug.xcconfig"; path = "Target Support Files/Pods-HIITWorkoutUITests/Pods-HIITWorkoutUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA5275C49E20396D93F5C3C7 /* Pods_HIITWorkoutUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITWorkoutUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB442540F64504CD71BD5CB7 /* Pods_HIITWorkoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITWorkoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD7AB262278D0D500C2AB98 /* HIITWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD7AB292278D0D500C2AB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD7AB2B2278D0D500C2AB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +64,7 @@
 		ECD7AB4B2278D0D700C2AB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD7AB592278F15700C2AB98 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		ECD7AB5C2278F20500C2AB98 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EF484F71624420B1E3D0DB79 /* Pods-HIITWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITWorkout.debug.xcconfig"; path = "Target Support Files/Pods-HIITWorkout/Pods-HIITWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD7AB5D2278F20500C2AB98 /* AVFoundation.framework in Frameworks */,
+				845944DCCBA139F0CAAC55BF /* Pods_HIITWorkout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86BC225EC9D2988A646029E /* Pods_HIITWorkoutTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +89,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0798FBABEAAC35C0C5A95ECE /* Pods_HIITWorkoutUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BB9C9B5150A8C6DCBE117DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF484F71624420B1E3D0DB79 /* Pods-HIITWorkout.debug.xcconfig */,
+				458A07B0A390C120E1636D9C /* Pods-HIITWorkout.release.xcconfig */,
+				001684024E22CD826125EC0C /* Pods-HIITWorkoutTests.debug.xcconfig */,
+				77C574799575B6B8E23C86F8 /* Pods-HIITWorkoutTests.release.xcconfig */,
+				D39BE2BD16675FA7F6D52C9D /* Pods-HIITWorkoutUITests.debug.xcconfig */,
+				7B6940A2DFDFC110490F6E9F /* Pods-HIITWorkoutUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECD7AB1D2278D0D500C2AB98 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,7 @@
 				ECD7AB482278D0D700C2AB98 /* HIITWorkoutUITests */,
 				ECD7AB272278D0D500C2AB98 /* Products */,
 				ECD7AB5B2278F20500C2AB98 /* Frameworks */,
+				6BB9C9B5150A8C6DCBE117DF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +137,7 @@
 				ECD7AB292278D0D500C2AB98 /* AppDelegate.swift */,
 				ECD7AB2B2278D0D500C2AB98 /* ViewController.swift */,
 				ECD7AB2D2278D0D500C2AB98 /* Main.storyboard */,
+				0AAE40A0227A104300432EFE /* UIViewExtension.swift */,
 				ECD7AB302278D0D700C2AB98 /* Assets.xcassets */,
 				ECD7AB322278D0D700C2AB98 /* LaunchScreen.storyboard */,
 				ECD7AB352278D0D700C2AB98 /* Info.plist */,
@@ -136,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				ECD7AB5C2278F20500C2AB98 /* AVFoundation.framework */,
+				946A7E0F097C269A8E55818B /* Pods_HIITWorkout.framework */,
+				DB442540F64504CD71BD5CB7 /* Pods_HIITWorkoutTests.framework */,
+				DA5275C49E20396D93F5C3C7 /* Pods_HIITWorkoutUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECD7AB4E2278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkout" */;
 			buildPhases = (
+				34F410C61332B18EEA8C102E /* [CP] Check Pods Manifest.lock */,
 				ECD7AB222278D0D500C2AB98 /* Sources */,
 				ECD7AB232278D0D500C2AB98 /* Frameworks */,
 				ECD7AB242278D0D500C2AB98 /* Resources */,
+				EC2ED6EADC2F8E808E57A7DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECD7AB512278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkoutTests" */;
 			buildPhases = (
+				520CD1A54E46E07C5D33E5AA /* [CP] Check Pods Manifest.lock */,
 				ECD7AB362278D0D700C2AB98 /* Sources */,
 				ECD7AB372278D0D700C2AB98 /* Frameworks */,
 				ECD7AB382278D0D700C2AB98 /* Resources */,
@@ -182,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECD7AB542278D0D700C2AB98 /* Build configuration list for PBXNativeTarget "HIITWorkoutUITests" */;
 			buildPhases = (
+				84E94BA8EDA375487AC3B3AB /* [CP] Check Pods Manifest.lock */,
 				ECD7AB412278D0D700C2AB98 /* Sources */,
 				ECD7AB422278D0D700C2AB98 /* Frameworks */,
 				ECD7AB432278D0D700C2AB98 /* Resources */,
@@ -267,11 +306,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34F410C61332B18EEA8C102E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HIITWorkout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		520CD1A54E46E07C5D33E5AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HIITWorkoutTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84E94BA8EDA375487AC3B3AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HIITWorkoutUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC2ED6EADC2F8E808E57A7DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HIITWorkout/Pods-HIITWorkout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HIITWorkout/Pods-HIITWorkout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECD7AB222278D0D500C2AB98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAE40A1227A104300432EFE /* UIViewExtension.swift in Sources */,
 				ECD7AB2C2278D0D500C2AB98 /* ViewController.swift in Sources */,
 				ECD7AB2A2278D0D500C2AB98 /* AppDelegate.swift in Sources */,
 			);
@@ -446,42 +577,47 @@
 		};
 		ECD7AB4F2278D0D700C2AB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF484F71624420B1E3D0DB79 /* Pods-HIITWorkout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				DEVELOPMENT_TEAM = B5SGBECJX7;
 				INFOPLIST_FILE = HIITWorkout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johndavidgriffin.HIITWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		ECD7AB502278D0D700C2AB98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458A07B0A390C120E1636D9C /* Pods-HIITWorkout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3YRSU2H5Q6;
+				DEVELOPMENT_TEAM = B5SGBECJX7;
 				INFOPLIST_FILE = HIITWorkout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.KentonHorton.HIITWorkout.HIITWorkout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johndavidgriffin.HIITWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		ECD7AB522278D0D700C2AB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 001684024E22CD826125EC0C /* Pods-HIITWorkoutTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +639,7 @@
 		};
 		ECD7AB532278D0D700C2AB98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77C574799575B6B8E23C86F8 /* Pods-HIITWorkoutTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +661,7 @@
 		};
 		ECD7AB552278D0D700C2AB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D39BE2BD16675FA7F6D52C9D /* Pods-HIITWorkoutUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +682,7 @@
 		};
 		ECD7AB562278D0D700C2AB98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6940A2DFDFC110490F6E9F /* Pods-HIITWorkoutUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
