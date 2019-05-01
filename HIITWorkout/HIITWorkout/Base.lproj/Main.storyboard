@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-Je-Qel" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                 <rect key="frame" x="67.5" y="80" width="240" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asm-Mq-ifE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asm-Mq-ifE">
                                         <rect key="frame" x="15" y="104" width="210" height="32"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,36 +92,6 @@
                                     <action selector="StopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6R-fV-ze0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSm-e2-AQB">
-                                <rect key="frame" x="320" y="141" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
-                                <connections>
-                                    <action selector="totalTimeEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="u57-f2-gbT"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xM6-1I-bX3">
-                                <rect key="frame" x="320" y="186" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
-                                <connections>
-                                    <action selector="sprintTimeEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ra0-fI-UOk"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0m-Yn-Tbk">
-                                <rect key="frame" x="320" y="224" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
-                                <connections>
-                                    <action selector="restTimeEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="pBT-vY-ASm"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL3-wu-0T2">
                                 <rect key="frame" x="100" y="355" width="175" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -287,12 +257,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="restTime" destination="r0m-Yn-Tbk" id="l7G-mh-iMl"/>
-                        <outlet property="sprintTime" destination="xM6-1I-bX3" id="Cp9-WW-vjm"/>
+                        <outlet property="restDecreaseOutlet" destination="ATN-7I-oNG" id="6cR-c4-wQJ"/>
+                        <outlet property="restIncreaseOutlet" destination="LoU-ps-lU9" id="ljE-tc-VkR"/>
+                        <outlet property="restTimeLabel" destination="VnW-E1-WsO" id="01r-g5-9rn"/>
+                        <outlet property="sprintDecreaseOutlet" destination="avX-da-JHG" id="jlW-pc-8XL"/>
+                        <outlet property="sprintIncreaseOutlet" destination="its-dn-ty1" id="wFp-1m-sUy"/>
+                        <outlet property="sprintTimeLabel" destination="IFM-JJ-vXj" id="Dou-ey-k4q"/>
                         <outlet property="startOutlet" destination="mZq-yi-W3N" id="V6o-6O-GNw"/>
                         <outlet property="stopOutlet" destination="Q31-Kf-EF0" id="dUr-hI-P1d"/>
+                        <outlet property="timeDecreaseOutlet" destination="hU5-Rn-BKu" id="VHk-RV-AO0"/>
+                        <outlet property="timeIncreaseOutlet" destination="8gK-t5-cPK" id="5D9-L8-H4o"/>
                         <outlet property="timeLeft" destination="asm-Mq-ifE" id="hWI-YF-Hpl"/>
-                        <outlet property="totalTime" destination="YSm-e2-AQB" id="uZp-h0-JkU"/>
+                        <outlet property="totalTimeLabel" destination="YfY-g0-rMN" id="w0G-gT-mXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

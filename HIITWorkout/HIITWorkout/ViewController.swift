@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var sprintStartTime = 0
     var restStartTime = 0
     
+    var timeTarget = 600
     var time = 600
     var sprint = 30
     var rest = 30
@@ -26,20 +27,29 @@ class ViewController: UIViewController {
     var restTimerStarted = false
     
     @IBOutlet weak var timeLeft: UILabel!
-    @IBOutlet weak var totalTime: UITextField!
-    @IBOutlet weak var sprintTime: UITextField!
-    @IBOutlet weak var restTime: UITextField!
     @IBOutlet weak var startOutlet: UIButton!
     @IBOutlet weak var stopOutlet: UIButton!
     
-    func setTime()
+    func convertSeconds()
     {
-        let textFieldInt: Int? = Int(totalTime.text!)
-        let num = (textFieldInt ?? 0) * 60
-        let convertNum = String(num)
-
-            time = num
-            timeLeft.text = convertNum + " seconds"
+        if(time < 60)
+        {
+            timeLeft.text = String(time) + "s"
+        }
+        else if(time >= 60)
+        {
+            let minutes = time / 60
+            let seconds = time % 60
+            
+            if(seconds == 0)
+            {
+                timeLeft.text = String(minutes) + "m"
+            }
+            else
+            {
+            timeLeft.text = String(minutes) + "m " + String(seconds) + "s"
+            }
+        }
     }
     
     @IBAction func StartTimer(_ sender: UIButton) {
@@ -47,14 +57,10 @@ class ViewController: UIViewController {
             timerStarted = true
             sprintTimerStarted = true
             
-            totalTime.isEnabled = false
-            sprintTime.isEnabled = false
-            restTime.isEnabled = false
-            startOutlet.isEnabled = false
-            
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decrement), userInfo: nil, repeats: true)
             
             sprintStartTime = time
+            turnArrows(isEnabled: false)
         }
     }
     
@@ -62,32 +68,18 @@ class ViewController: UIViewController {
     {
         timer.invalidate()
         timerStarted = false
-        setTime()
-        
-        totalTime.isEnabled = true
-        sprintTime.isEnabled = true
-        restTime.isEnabled = true
-        startOutlet.isEnabled = true
+        time = timeTarget
+        convertSeconds()
+        turnArrows(isEnabled: true)
     }
     
     @IBAction func StopTimer(_ sender: UIButton) {
         timerStop()
     }
     
-    @IBAction func totalTimeEdit(_ sender: Any) {
-        setTime()
-    }
-    @IBAction func sprintTimeEdit(_ sender: Any) {
-        sprint = Int(sprintTime.text!) ?? 30
-    }
-    
-    @IBAction func restTimeEdit(_ sender: Any) {
-        rest = Int(restTime.text!) ?? 30
-    }
-    
     @objc func decrement() {
         time -= 1
-        timeLeft.text = String(time) + " seconds"
+        convertSeconds()
         
         if(time == 0){
             //audioPlayer.play()
@@ -109,23 +101,135 @@ class ViewController: UIViewController {
         }
     }
     @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var timeDecreaseOutlet: UIButton!
+    @IBOutlet weak var timeIncreaseOutlet: UIButton!
+    
+    @IBOutlet weak var sprintDecreaseOutlet: UIButton!
+    @IBOutlet weak var sprintIncreaseOutlet: UIButton!
+    
+    @IBOutlet weak var restDecreaseOutlet: UIButton!
+    @IBOutlet weak var restIncreaseOutlet: UIButton!
+    
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    @IBOutlet weak var sprintTimeLabel: UILabel!
+    @IBOutlet weak var restTimeLabel: UILabel!
+    
+    func turnArrows(isEnabled: Bool)
+    {
+        timeDecreaseOutlet.isEnabled = isEnabled
+        timeIncreaseOutlet.isEnabled = isEnabled
+        
+        sprintDecreaseOutlet.isEnabled = isEnabled
+        sprintIncreaseOutlet.isEnabled = isEnabled
+        
+        restDecreaseOutlet.isEnabled = isEnabled
+        restIncreaseOutlet.isEnabled = isEnabled
+    }
     
     @IBAction func totalTimeDecreaseBtn(_ sender: UIButton) {
+        if(time > (5 * 60))
+        {
+            time = time - (60 * 5)
+        }
+        if(time <= 3300)
+        {
+            timeIncreaseOutlet.isEnabled = true
+        }
+        if(time == 300)
+        {
+            timeDecreaseOutlet.isEnabled = false
+        }
+        
+        totalTimeLabel.text = String(time / 60) + "m"
+        timeTarget = time
+        convertSeconds()
     }
     
     @IBAction func totalTimeIncreaseBtn(_ sender: UIButton) {
+        if(time < (60 * 60))
+        {
+            time = time + (60 * 5)
+        }
+        if(time > (60 * 5))
+        {
+            timeDecreaseOutlet.isEnabled = true
+        }
+        if(time == (60 * 60))
+        {
+            timeIncreaseOutlet.isEnabled = false
+        }
+        
+        totalTimeLabel.text = String(time / 60) + "m"
+        timeTarget = time
+        convertSeconds()
     }
     
     @IBAction func sprintTimeDecreaseBtn(_ sender: UIButton) {
+        if(sprint > 15)
+        {
+            sprint = sprint - 15
+        }
+        if(sprint < 60)
+        {
+            sprintIncreaseOutlet.isEnabled = true
+        }
+        if(sprint == 15)
+        {
+            sprintDecreaseOutlet.isEnabled = false
+        }
+        
+        sprintTimeLabel.text = String(sprint) + "s"
     }
     
     @IBAction func sprintTimeIncreaseBtn(_ sender: UIButton) {
+        if(sprint < 60)
+        {
+            sprint = sprint + 15
+        }
+        if(sprint > 15)
+        {
+            sprintDecreaseOutlet.isEnabled = true
+        }
+        if(sprint == 60)
+        {
+            sprintIncreaseOutlet.isEnabled = false
+        }
+        
+        sprintTimeLabel.text = String(sprint) + "s"
     }
     
     @IBAction func restTimeDecreaseBtn(_ sender: UIButton) {
+        if(rest > 15)
+        {
+            rest = rest - 15
+        }
+        if(rest < 60)
+        {
+            restIncreaseOutlet.isEnabled = true
+        }
+        if(rest == 15)
+        {
+            restDecreaseOutlet.isEnabled = false
+        }
+        
+        restTimeLabel.text = String(rest) + "s"
     }
     
     @IBAction func restTimeIncreaseBtn(_ sender: UIButton) {
+        if(rest < 60)
+        {
+            rest = rest + 15
+        }
+        if(rest > 15)
+        {
+            restDecreaseOutlet.isEnabled = true
+        }
+        if(rest == 60)
+        {
+            restIncreaseOutlet.isEnabled = false
+        }
+        
+        restTimeLabel.text = String(rest) + "s"
     }
     
     override func viewDidLoad() {
