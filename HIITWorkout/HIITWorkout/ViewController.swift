@@ -6,6 +6,7 @@
 //  Copyright © 2019 Kenton Horton. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import AVFoundation
 import UICircularProgressRing
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var sprintTimeLabel: UILabel!
     @IBOutlet weak var restTimeLabel: UILabel!
     @IBOutlet weak var timerRing: UICircularProgressRing!
+    
+    let defaults = UserDefaults.standard
     
     var audioPlayer = AVAudioPlayer()
     
@@ -146,6 +149,7 @@ class ViewController: UIViewController {
         totalTimeLabel.text = String(time / 60) + "m"
         timeTarget = time
         convertSeconds()
+        saveUserDefaults()
     }
     
     @IBAction func totalTimeIncreaseBtn(_ sender: UIButton) {
@@ -162,6 +166,7 @@ class ViewController: UIViewController {
         totalTimeLabel.text = String(time / 60) + "m"
         timeTarget = time
         convertSeconds()
+        saveUserDefaults()
     }
     
     @IBAction func sprintTimeDecreaseBtn(_ sender: UIButton) {
@@ -176,6 +181,7 @@ class ViewController: UIViewController {
         }
         
         sprintTimeLabel.text = String(sprint) + "s"
+        saveUserDefaults()
     }
     
     @IBAction func sprintTimeIncreaseBtn(_ sender: UIButton) {
@@ -190,6 +196,7 @@ class ViewController: UIViewController {
         }
         
         sprintTimeLabel.text = String(sprint) + "s"
+        saveUserDefaults()
     }
     
     @IBAction func restTimeDecreaseBtn(_ sender: UIButton) {
@@ -204,6 +211,7 @@ class ViewController: UIViewController {
         }
         
         restTimeLabel.text = String(rest) + "s"
+        saveUserDefaults()
     }
     
     @IBAction func restTimeIncreaseBtn(_ sender: UIButton) {
@@ -218,6 +226,30 @@ class ViewController: UIViewController {
         }
         
         restTimeLabel.text = String(rest) + "s"
+        saveUserDefaults()
+    }
+    
+    func saveUserDefaults() {
+        var saveString: String
+        
+        saveString = "\(timeTarget)|\(sprint)|\(rest)"
+        
+        defaults.set(saveString, forKey: "settings")
+        defaults.synchronize()
+    }
+    
+    func loadUserDefaults() {
+        if let settingsString = defaults.string( forKey: "settings" ) {
+            let components = settingsString.components( separatedBy: "|" )
+            timeTarget = Int(components[0])!
+            time = Int(components[0])!
+            sprint = Int(components[1])!
+            rest = Int(components[2])!
+            convertSeconds()
+            totalTimeLabel.text = "\(timeTarget / 60)m"
+            sprintTimeLabel.text = "\(sprint)s"
+            restTimeLabel.text = "\(rest)s"
+        }
     }
     
     override func viewDidLoad() {
@@ -233,6 +265,18 @@ class ViewController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
         
         view.setGradientBackground(colorOne: UIColor(red: 58/255, green: 97/255, blue: 134/255, alpha: 1.0), colorTwo: UIColor(red: 137/255, green: 37/255, blue: 62/255, alpha: 1.0))
+    }
+    
+    override func viewDidAppear( _ animated: Bool ) {
+        super.viewDidAppear( animated )
+        
+        loadUserDefaults()
+    }
+    
+    override func viewWillDisappear( _ animated: Bool ) {
+        super.viewWillDisappear( animated )
+        
+        saveUserDefaults()
     }
 }
 
