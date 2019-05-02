@@ -45,15 +45,15 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="100"/>
+                                        <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
                                         <color key="value" red="0.039753659357992202" green="0.58974214452385165" blue="0.93221241235733032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="125"/>
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
                                         <real key="value" value="-90"/>
                                     </userDefinedRuntimeAttribute>
@@ -65,7 +65,11 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isClockwise" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
-                                        <color key="value" red="1" green="0.38513905838104534" blue="0.22327003914738153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.0078892099147792882" green="0.90315333549222798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                                        <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

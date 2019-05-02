@@ -51,14 +51,13 @@ class ViewController: UIViewController {
             timeLeft.text = String(minutes) + "m " + String(seconds) + "s"
             }
         }
-        
-        
     }
     
     @IBAction func StartTimer(_ sender: UIButton) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decrement), userInfo: nil, repeats: true)
         
         if(!pause){
+            //START PROGRESS RING AT 0 and SET MAX VALUE EQUAL to time
             sprintStartTime = time
         }
         
@@ -74,6 +73,7 @@ class ViewController: UIViewController {
     @IBAction func StopTimer(_ sender: UIButton) {
         if(pause)
         {
+            //PAUSE RING PROGRESS
             pause = false
             stopOutlet.titleLabel?.text = "RESET"
             timerStop()
@@ -89,6 +89,7 @@ class ViewController: UIViewController {
     
     func timerStop()
     {
+        //RESET RING PROGRESS
         timer.invalidate()
         timerStarted = false
         time = timeTarget
@@ -98,6 +99,7 @@ class ViewController: UIViewController {
     
     @objc func decrement() {
         time -= 1
+        //MAY NEED TO SET VALUE OF PROGRESS RING HERE
         convertSeconds()
         
         if(time == 0){
