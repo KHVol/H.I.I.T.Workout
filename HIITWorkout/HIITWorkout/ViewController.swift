@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     var timerStarted = false
     var sprintTimerStarted = false
     var restTimerStarted = false
+    var pause = false
     
     @IBOutlet weak var timeLeft: UILabel!
     @IBOutlet weak var startOutlet: UIButton!
@@ -55,14 +56,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func StartTimer(_ sender: UIButton) {
-        if(!timerStarted) {
-            timerStarted = true
-            sprintTimerStarted = true
-            
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decrement), userInfo: nil, repeats: true)
-            
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decrement), userInfo: nil, repeats: true)
+        
+        if(!pause){
             sprintStartTime = time
-            turnArrows(isEnabled: false)
+        }
+        
+        pause = false
+        timerStarted = true
+        sprintTimerStarted = true
+        
+        turnArrows(isEnabled: false)
+        stopOutlet.titleLabel?.text = "STOP"
+    }
+    
+    
+    @IBAction func StopTimer(_ sender: UIButton) {
+        if(pause)
+        {
+            pause = false
+            stopOutlet.titleLabel?.text = "RESET"
+            timerStop()
+        }
+        else if(timerStarted)
+        {
+            timer.invalidate()
+            startOutlet.isEnabled = true
+            pause = true
+            stopOutlet.titleLabel?.text = "RESET"
         }
     }
     
@@ -73,10 +94,6 @@ class ViewController: UIViewController {
         time = timeTarget
         convertSeconds()
         turnArrows(isEnabled: true)
-    }
-    
-    @IBAction func StopTimer(_ sender: UIButton) {
-        timerStop()
     }
     
     @objc func decrement() {
@@ -102,7 +119,7 @@ class ViewController: UIViewController {
             sprintTimerStarted = true
         }
     }
-    @IBOutlet weak var subView: UIView!
+    
     @IBOutlet weak var timeDecreaseOutlet: UIButton!
     @IBOutlet weak var timeIncreaseOutlet: UIButton!
     
@@ -126,6 +143,8 @@ class ViewController: UIViewController {
         
         restDecreaseOutlet.isEnabled = isEnabled
         restIncreaseOutlet.isEnabled = isEnabled
+        
+        startOutlet.isEnabled = isEnabled
     }
     
     @IBAction func totalTimeDecreaseBtn(_ sender: UIButton) {
@@ -235,6 +254,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
 
         let audioPath = Bundle.main.path(forResource: "1", ofType: ".mp3")
