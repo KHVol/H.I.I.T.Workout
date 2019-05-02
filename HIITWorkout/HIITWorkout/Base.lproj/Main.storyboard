@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,12 +26,19 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-Sl-612">
+                                        <rect key="frame" x="32" y="144" width="175" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="asm-Mq-ifE" firstAttribute="top" secondItem="rTk-Je-Qel" secondAttribute="top" constant="104" id="8Gc-TN-kRU"/>
                                     <constraint firstItem="asm-Mq-ifE" firstAttribute="leading" secondItem="rTk-Je-Qel" secondAttribute="leading" constant="15" id="AIg-a0-6xj"/>
                                     <constraint firstAttribute="width" constant="240" id="RP6-hz-GeP"/>
+                                    <constraint firstItem="bcO-Sl-612" firstAttribute="top" secondItem="asm-Mq-ifE" secondAttribute="bottom" constant="8" id="T0X-Ya-6XS"/>
                                     <constraint firstAttribute="height" constant="240" id="TRM-8j-RNx"/>
                                     <constraint firstAttribute="width" secondItem="rTk-Je-Qel" secondAttribute="height" multiplier="1:1" id="bgQ-ox-pwK"/>
                                     <constraint firstAttribute="bottom" secondItem="asm-Mq-ifE" secondAttribute="bottom" constant="104" id="iC6-E5-buW"/>
@@ -226,6 +233,7 @@
                             <constraint firstItem="LoU-ps-lU9" firstAttribute="top" secondItem="hP2-Wq-B4q" secondAttribute="bottom" constant="12.5" id="7ym-1c-PpK"/>
                             <constraint firstItem="its-dn-ty1" firstAttribute="leading" secondItem="IFM-JJ-vXj" secondAttribute="trailing" constant="15" id="9eb-NQ-Lts"/>
                             <constraint firstItem="avX-da-JHG" firstAttribute="top" secondItem="Zso-cq-Jwg" secondAttribute="bottom" constant="12.5" id="AZv-kN-4gY"/>
+                            <constraint firstItem="bcO-Sl-612" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99.5" id="CmE-zD-oK8"/>
                             <constraint firstItem="its-dn-ty1" firstAttribute="width" secondItem="its-dn-ty1" secondAttribute="height" multiplier="1:1" id="ExA-1d-hCk"/>
                             <constraint firstItem="Zso-cq-Jwg" firstAttribute="top" secondItem="YfY-g0-rMN" secondAttribute="bottom" constant="20" id="HqT-xk-Q5N"/>
                             <constraint firstItem="avX-da-JHG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="IXc-zO-Xr1"/>
@@ -237,6 +245,7 @@
                             <constraint firstItem="Q31-Kf-EF0" firstAttribute="leading" secondItem="mZq-yi-W3N" secondAttribute="trailing" constant="25" id="Oh1-96-deR"/>
                             <constraint firstItem="rTk-Je-Qel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Uja-El-21l"/>
                             <constraint firstItem="ATN-7I-oNG" firstAttribute="width" secondItem="ATN-7I-oNG" secondAttribute="height" multiplier="1:1" id="WP3-yA-mcc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bcO-Sl-612" secondAttribute="trailing" constant="100.5" id="XNw-nd-qpX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rTk-Je-Qel" secondAttribute="trailing" constant="67.5" id="YId-Yl-C0K"/>
                             <constraint firstItem="Zso-cq-Jwg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="YQU-Na-pNT"/>
                             <constraint firstItem="hP2-Wq-B4q" firstAttribute="top" secondItem="IFM-JJ-vXj" secondAttribute="bottom" constant="20" id="ZB1-bt-SwP"/>
@@ -267,6 +276,7 @@
                         <outlet property="restDecreaseOutlet" destination="ATN-7I-oNG" id="6cR-c4-wQJ"/>
                         <outlet property="restIncreaseOutlet" destination="LoU-ps-lU9" id="ljE-tc-VkR"/>
                         <outlet property="restTimeLabel" destination="VnW-E1-WsO" id="01r-g5-9rn"/>
+                        <outlet property="settingLabel" destination="bcO-Sl-612" id="WTn-GI-mlq"/>
                         <outlet property="sprintDecreaseOutlet" destination="avX-da-JHG" id="jlW-pc-8XL"/>
                         <outlet property="sprintIncreaseOutlet" destination="its-dn-ty1" id="wFp-1m-sUy"/>
                         <outlet property="sprintTimeLabel" destination="IFM-JJ-vXj" id="Dou-ey-k4q"/>

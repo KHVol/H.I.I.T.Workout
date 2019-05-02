@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var sprintTimeLabel: UILabel!
     @IBOutlet weak var restTimeLabel: UILabel!
+    @IBOutlet weak var settingLabel: UILabel!
     @IBOutlet weak var timerRing: UICircularProgressRing!
     
     let defaults = UserDefaults.standard
@@ -74,6 +75,7 @@ class ViewController: UIViewController {
         
         turnArrows(isEnabled: false)
         stopOutlet.titleLabel?.text = "STOP"
+        settingLabel.text = "SPRINT"
     }
     
     
@@ -94,6 +96,7 @@ class ViewController: UIViewController {
     func timerStop() {
         timer.invalidate()
         timerStarted = false
+        settingLabel.text = ""
         time = timeTarget
         convertSeconds()
         turnArrows(isEnabled: true)
@@ -114,11 +117,13 @@ class ViewController: UIViewController {
             sprintTimerStarted = false
             restStartTime = time
             restTimerStarted = true
+            settingLabel.text = "REST"
         } else if (restTimerStarted && (restStartTime - rest == time)) {
             audioPlayer.play()
             restTimerStarted = false
             sprintStartTime = time
             sprintTimerStarted = true
+            settingLabel.text = "SPRINT"
         }
     }
     
