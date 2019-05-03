@@ -11,7 +11,7 @@ import UIKit
 import AVFoundation
 import UICircularProgressRing
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var timeLeft: UILabel!
     @IBOutlet weak var startOutlet: UIButton!
@@ -45,6 +45,11 @@ class ViewController: UIViewController {
     var sprintTimerStarted = false
     var restTimerStarted = false
     var pause = false
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer,
+                                     successfully flag: Bool) {
+        
+    }
     
     func convertSeconds() {
         if (time < 60) {
@@ -259,6 +264,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        // Keeps background audio playing and make the alarm play louder and then resume volume for background audio
+        do {
+            _ = try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.multiRoute, options: AVAudioSession.CategoryOptions.duckOthers)
+        } catch {
+            print(error)
+        }
 
         let audioPath = Bundle.main.path(forResource: "1", ofType: ".mp3")
             do {
@@ -266,8 +278,6 @@ class ViewController: UIViewController {
             } catch {
                 print(error)
             }
-        
-        UIApplication.shared.statusBarStyle = .lightContent
         
         view.setGradientBackground(colorOne: UIColor(red: 58/255, green: 97/255, blue: 134/255, alpha: 1.0), colorTwo: UIColor(red: 137/255, green: 37/255, blue: 62/255, alpha: 1.0))
     }
@@ -282,6 +292,10 @@ class ViewController: UIViewController {
         super.viewWillDisappear( animated )
         
         saveUserDefaults()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
