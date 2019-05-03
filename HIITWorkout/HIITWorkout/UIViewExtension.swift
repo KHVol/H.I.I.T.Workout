@@ -2,8 +2,8 @@
 //  UIViewExtension.swift
 //  HIITWorkout
 //
-//  Created by John Griffin on 5/1/19.
-//  Copyright © 2019 Kenton Horton. All rights reserved.
+//  Created by Kenton Horton and John David Griffin on 4/30/19.
+//  Copyright © 2019 Kenton Horton and John David Griffin. All rights reserved.
 //
 
 import Foundation
