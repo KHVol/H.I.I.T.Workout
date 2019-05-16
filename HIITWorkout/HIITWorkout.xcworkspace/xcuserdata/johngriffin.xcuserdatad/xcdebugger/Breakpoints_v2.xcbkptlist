@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HIITWorkout/ViewController.swift"
-            timestampString = "578459173.323645"
+            timestampString = "579701187.222688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "decrement()"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "timerStop()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HIITWorkout/ViewController.swift"
-            timestampString = "578459173.3240761"
+            timestampString = "579701187.2227679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "decrement()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "timerStop()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HIITWorkout/ViewController.swift"
-            timestampString = "578459173.324366"
+            timestampString = "579701187.222829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
-            landmarkName = "loadUserDefaults()"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "saveUserDefaults()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

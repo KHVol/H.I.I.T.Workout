@@ -35,8 +35,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var sprintStartTime = 0
     var restStartTime = 0
     
-    var timeTarget = 600
-    var time = 600
+    var timeTarget = 1200
+    var time = 1200
     var sprint = 30
     var rest = 30
     var timer = Timer()
@@ -44,7 +44,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var timerStarted = false
     var sprintTimerStarted = false
     var restTimerStarted = false
-    var pause = false
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer,
                                      successfully flag: Bool) {
@@ -69,33 +68,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func StartTimer(_ sender: UIButton) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decrement), userInfo: nil, repeats: true)
         
-        if (!pause) {
-            //START PROGRESS RING AT 0 and SET MAX VALUE EQUAL to time
-            sprintStartTime = time
-        }
-        
-        pause = false
+        sprintStartTime = time
         timerStarted = true
         sprintTimerStarted = true
-        
-        turnArrows(isEnabled: false)
+        startOutlet.isHidden = true
+        stopOutlet.isHidden = false
+        turnArrows(false)
         stopOutlet.titleLabel?.text = "STOP"
         settingLabel.text = "SPRINT"
     }
     
     
     @IBAction func StopTimer(_ sender: UIButton) {
-        if (pause) {
-            //PAUSE RING PROGRESS
-            pause = false
-            stopOutlet.titleLabel?.text = "RESET"
-            timerStop()
-        } else if (timerStarted) {
-            timer.invalidate()
-            startOutlet.isEnabled = true
-            pause = true
-            stopOutlet.titleLabel?.text = "RESET"
-        }
+        startOutlet.isHidden = false
+        stopOutlet.isHidden = true
+        timerStop()
     }
     
     func timerStop() {
@@ -104,7 +91,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         settingLabel.text = ""
         time = timeTarget
         convertSeconds()
-        turnArrows(isEnabled: true)
+        turnArrows(true)
         timerRing.value = CGFloat(100.00)
     }
     
@@ -132,7 +119,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    func turnArrows(isEnabled: Bool) {
+    func turnArrows(_ isEnabled: Bool) {
         timeDecreaseOutlet.isEnabled = isEnabled
         timeIncreaseOutlet.isEnabled = isEnabled
         
@@ -149,15 +136,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if (time > (5 * 60)) {
             time = time - (60 * 5)
         }
-        if (time <= 3300) {
-            timeIncreaseOutlet.isEnabled = true
-        }
-        if (time == 300) {
-            timeDecreaseOutlet.isEnabled = false
-        }
-        
-        totalTimeLabel.text = String(time / 60) + "m"
         timeTarget = time
+        checkButtons("total")
+        totalTimeLabel.text = String(time / 60) + "m"
         convertSeconds()
         saveUserDefaults()
     }
@@ -166,15 +147,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if (time < (60 * 60)) {
             time = time + (60 * 5)
         }
-        if (time > (60 * 5)) {
-            timeDecreaseOutlet.isEnabled = true
-        }
-        if (time == (60 * 60)) {
-            timeIncreaseOutlet.isEnabled = false
-        }
-        
-        totalTimeLabel.text = String(time / 60) + "m"
         timeTarget = time
+        checkButtons("total")
+        totalTimeLabel.text = String(time / 60) + "m"
         convertSeconds()
         saveUserDefaults()
     }
@@ -183,13 +158,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if (sprint > 15) {
             sprint = sprint - 15
         }
-        if (sprint < 60) {
-            sprintIncreaseOutlet.isEnabled = true
-        }
-        if (sprint == 15) {
-            sprintDecreaseOutlet.isEnabled = false
-        }
-        
+        checkButtons("sprint")
         sprintTimeLabel.text = String(sprint) + "s"
         saveUserDefaults()
     }
@@ -198,13 +167,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if (sprint < 60) {
             sprint = sprint + 15
         }
-        if (sprint > 15) {
-            sprintDecreaseOutlet.isEnabled = true
-        }
-        if (sprint == 60) {
-            sprintIncreaseOutlet.isEnabled = false
-        }
-        
+        checkButtons("sprint")
         sprintTimeLabel.text = String(sprint) + "s"
         saveUserDefaults()
     }
@@ -213,13 +176,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if (rest > 15) {
             rest = rest - 15
         }
-        if (rest < 60) {
-            restIncreaseOutlet.isEnabled = true
-        }
-        if (rest == 15) {
-            restDecreaseOutlet.isEnabled = false
-        }
-        
+        checkButtons("rest")
         restTimeLabel.text = String(rest) + "s"
         saveUserDefaults()
     }
@@ -228,13 +185,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if (rest < 60) {
             rest = rest + 15
         }
-        if (rest > 15) {
-            restDecreaseOutlet.isEnabled = true
-        }
-        if (rest == 60) {
-            restIncreaseOutlet.isEnabled = false
-        }
-        
+        checkButtons("rest")
         restTimeLabel.text = String(rest) + "s"
         saveUserDefaults()
     }
@@ -259,11 +210,56 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             totalTimeLabel.text = "\(timeTarget / 60)m"
             sprintTimeLabel.text = "\(sprint)s"
             restTimeLabel.text = "\(rest)s"
+            checkButtons("total")
+            checkButtons("sprint")
+            checkButtons("rest")
+        }
+    }
+    
+    func checkButtons(_ type: String) {
+        switch type {
+        case "total": // Total Time
+            if (timeTarget == 300) {
+                timeDecreaseOutlet.isEnabled = false
+                timeIncreaseOutlet.isEnabled = true
+            } else if (timeTarget == 3600) {
+                timeDecreaseOutlet.isEnabled = true
+                timeIncreaseOutlet.isEnabled = false
+            } else {
+                timeDecreaseOutlet.isEnabled = true
+                timeIncreaseOutlet.isEnabled = true
+            }
+        case "sprint": // Sprint Time
+            if (sprint == 15) {
+                sprintDecreaseOutlet.isEnabled = false
+                sprintIncreaseOutlet.isEnabled = true
+            } else if (sprint == 60) {
+                sprintDecreaseOutlet.isEnabled = true
+                sprintIncreaseOutlet.isEnabled = false
+            } else {
+                sprintDecreaseOutlet.isEnabled = true
+                sprintIncreaseOutlet.isEnabled = true
+            }
+        case "rest": // Rest Time
+            if (rest == 15) {
+                restDecreaseOutlet.isEnabled = false
+                restIncreaseOutlet.isEnabled = true
+            } else if (rest == 60) {
+                restDecreaseOutlet.isEnabled = true
+                restIncreaseOutlet.isEnabled = false
+            } else {
+                restDecreaseOutlet.isEnabled = true
+                restIncreaseOutlet.isEnabled = true
+            }
+        default:
+            turnArrows(true)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stopOutlet.isHidden = true
        
         // Keeps background audio playing and make the alarm play louder and then resume volume for background audio
         do {
@@ -298,4 +294,3 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         return .lightContent
     }
 }
-
